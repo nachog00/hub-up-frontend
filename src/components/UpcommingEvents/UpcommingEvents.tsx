@@ -1,21 +1,22 @@
 "use client"
 
 import events from "@/mock/events";
-import { Box, Card, Divider, SimpleGrid } from "@chakra-ui/react";
+import { Box, Button, Card, Divider, Heading, SimpleGrid } from "@chakra-ui/react";
 
 export default function UpcommingEvents() {
 
     return (
-        <Box>
-            <div className="flex flex col gap-2">
-                {events.map((event) => {
+        <Card padding={2} rounded={5} height={'100%'}>
+            <Heading className="mb-4" as={'h4'} size='lg'>Upcoming Events</Heading>
+            <div className="flex col gap-1">
+                {events.map((event,i) => {
                     return (<>
+                        {i != 0 && <Divider />}
                         <EventItem event={event} />
-                        <Divider />
                     </>)
                 })}
             </div>
-        </Box>
+        </Card>
     );
 }
 
@@ -23,12 +24,13 @@ type Event = typeof events[0];
 
 function EventItem({ event }: { event: Event }) {
     return (
-        <Card>
-            <SimpleGrid columns={3} spacing={2} padding={2}>
+        <Box>
+            <SimpleGrid columns={4} spacing={1} padding={2}>
                 <span>{new Date(event.date).toLocaleString()}</span>
                 <span>{event.location.name}</span>
                 <span>{event.host.name}</span>
+                <span><Button size={'sm'}>See more</Button></span>
             </SimpleGrid>
-        </Card>
+        </Box>
     );
 }

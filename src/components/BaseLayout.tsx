@@ -14,7 +14,7 @@ export default function BaseLayout({ children }: Readonly<{ children: ReactNode 
                 <h1>Opcion 1</h1>
             </Sidebar> */}
 
-            <Box as="main" flex={1} p={4} maxW={"lg"}>
+            <Box as="main" flex={1} p={4}>
                 {children}
             </Box>
 

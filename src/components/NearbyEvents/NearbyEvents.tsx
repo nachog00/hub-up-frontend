@@ -1,10 +1,10 @@
 "use client"
 
-import { Card, Heading } from "@chakra-ui/react";
+import type { MeetupEvent } from "@/interfaces/Event";
+import events from "@/mock/events";
+import { Button, Card, Flex, Heading } from "@chakra-ui/react";
 import { useState } from "react";
 import { EventListItem } from "../Event";
-import events from "@/mock/events";
-import type { MeetupEvent } from "@/interfaces/Event";
 
 export default function NearbyEvents() {
 
@@ -12,13 +12,12 @@ export default function NearbyEvents() {
 
     return (
         <Card padding={2}>
-            <div className="flex space-between">
+            <Flex justify={'space-between'}>
                 <Heading size="md" as='h2' className='mb-4'>Nearby Events</Heading>
-                    <div className="flex gap-1">
-                        <button onClick={() => setDisplayMode('map')}>Map</button>
-                        <button onClick={() => setDisplayMode('list')}>List</button>
-                    </div>
-            </div>
+                <Button size={'sm'} onClick={() => setDisplayMode(prev => prev == 'list' ? 'map' : 'list')}>
+                    {displayMode === 'map' ? 'List View' : 'Map View'}
+                </Button>
+            </Flex>
             {displayMode === 'map' ? <Map /> : <List events={events} />}
         </Card>
     );

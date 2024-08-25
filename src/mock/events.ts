@@ -4,7 +4,7 @@ import type { MeetupEvent } from "@/interfaces/Event";
 const events : MeetupEvent[] = [
     {
         id: 1,
-        date: '2022-01-01:14:30:00Z',
+        date: '2024-08-29',
         maxParticipants: 5,
         minParticipants: 2,
         description: 'This is a test event',
@@ -14,14 +14,14 @@ const events : MeetupEvent[] = [
         duration: 2,
         protocol: 'avalanche',
         location: {
-            name: 'The White House',
-            address: '1600 Pennsylvania Ave NW, Washington, DC 20500',
-            coordinates: [37.5977, -77.0365],
+            name: 'Cafe Martinez',
+            address: 'Ayacucho 1240, Buenos Aires, Argentina',
+            coordinates: [-34.58774894,-58.38931571],
             id: 1,
         },
         host: {
             id: '0x1234567890abcdef',
-            name: 'Jackie Chan',
+            name: 'Manuel Araoz',
             rating: 4.5,
             bio: 'I like to meet cryptopunks and talk about zk',
         },
@@ -32,11 +32,11 @@ const events : MeetupEvent[] = [
     },
     {
         id:2,
-        date: '2022-01-02:14:30:00Z',
+        date: '2024-08-28',
         location: {
-            name: 'The White House',
-            address: '1600 Pennsylvania Ave NW, Washington, DC 20500',
-            coordinates: [35.8977, -77.0365],
+            name: 'Cowork Palermo',
+            address: 'Jeronimo Salguero 3172, Buenos Aires, Argentina',
+            coordinates: [-34.61476574, -58.39989369],
         },
         host: {
             id: '0x1234567890abcdef',
@@ -50,15 +50,15 @@ const events : MeetupEvent[] = [
     },
     {
         id:3,
-        date: '2022-01-03:14:30:00Z',
+        date: '2024-08-27',
         location: {
-            name: 'The White House',
-            address: '1600 Pennsylvania Ave NW, Washington, DC 20500',
-            coordinates: [38.8977, -77.0365],
+            name: 'Cafe Monserrat',
+            address: 'Bernardo de Irigoyen 330, Buenos Aires, Argentina',
+            coordinates: [-34.60476574, -58.38589369],
         },
         host: {
             id: '0x1234567890abcdef',
-            name: 'Joe Biden',
+            name: 'Fernando Lluberes',
             rating: 4.5,
         },
         interests: [
@@ -68,20 +68,20 @@ const events : MeetupEvent[] = [
     },
     {
         id:4,
-        date: '2022-01-04:14:30:00Z',
+        date: '2024-08-30',
         location: {
-            name: 'The White House',
-            address: '1600 Pennsylvania Ave NW, Washington, DC 20500',
-            coordinates: [34.8977, -77.0365],
+            name: 'La Estadia',
+            address: 'Av. Rivadavia 6100, Buenos Aires, Argentina',
+            coordinates: [-34.61476574, -58.37589369],
         },
         host: {
             id: '0x1234567890abcdef',
-            name: 'Donald Trump',
+            name: 'Felix Lluberes',
             rating: 4.5,
         },
         interests: [
             { id: 1, name: 'Politics' },
-            { id: 3, name: 'Technology' },
+            { id: 3, name: 'Web3' },
         ]
     },
 ]

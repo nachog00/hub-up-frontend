@@ -19,7 +19,7 @@ const MapComponent = ({ events = mockEvents }: MapProps) => {
 
 
   const center = calculateCenter(events);
-  const [zoom] = useState(100);
+  const [zoom] = useState(13);
 
   // Create a custom icon (optional)
   const customIcon = L.icon({

@@ -131,17 +131,13 @@ export default function EventDetails({ event }: { event: MeetupEvent }) {
                 </GridItem>
 
                 <FormControl>
-                    <FormLabel>Venue</FormLabel>
-                    <Select placeholder='Protocol' value={event.protocol} isReadOnly disabled>
-                        <option value='avalanche'>Avalanche</option>
-                        <option value='polygon'>Polygon</option>
-                        <option value='arbitrum'>Arbitrum</option>
-                    </Select>
+                    <FormLabel>Protocol</FormLabel>
+                    <Input type="text" value={event.protocol} readOnly />
                 </FormControl>
 
                 <Flex direction='column' align='center' marginTop={4}>
-                    <Button rightIcon={<ArrowForwardIcon />} colorScheme='teal' variant='outline'>
-                        Join event
+                    <Button rightIcon={<ArrowForwardIcon />} size={'lg'} colorScheme='teal'>
+                       JOIN EVENT
                     </Button>
                 </Flex>
 

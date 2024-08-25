@@ -8,7 +8,7 @@ export default function UpcommingEvents() {
 
     return (
         <Card padding={2} rounded={5} height={'100%'}>
-            <Heading className="mb-4" as={'h4'} size='md'>Upcoming Events</Heading>
+            <Heading marginBottom={2} as={'h4'} size='md'>Upcoming Events</Heading>
             <ListEvents events={events} />
         </Card>
     );

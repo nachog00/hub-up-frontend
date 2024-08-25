@@ -14,6 +14,7 @@ const events : MeetupEvent[] = [
             id: '0x1234567890abcdef',
             name: 'Jackie Chan',
             rating: 4.5,
+            bio: 'I like to meet cryptopunks and talk about zk',
         },
         interests: [
             { id: 1, name: 'Politics' },

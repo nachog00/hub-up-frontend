@@ -10,6 +10,7 @@ export type MeetupEvent = {
         name: string;
         id: string;
         rating: number;
+        bio?: string;
     };
     interests: Interest[];
 }

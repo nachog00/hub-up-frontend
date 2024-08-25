@@ -162,6 +162,7 @@ export default function HostSummary() {
         </>
     );
 }
+
 function InfoPill({ upperText, middleText, lowerText, color }: { upperText: string, middleText: string, lowerText: string, color: BackgroundProps['bg'] }) {
     return (
         <Card padding={2} rounded={5} width={'100%'} height={'100%'} bg={color} borderRadius={'xl'}>

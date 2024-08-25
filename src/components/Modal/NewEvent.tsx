@@ -79,7 +79,9 @@ export default function NewEvent({ children }: { children: React.ReactNode }) {
                     <InfoTooltip text="This is the amount of money each attende will pay to attend. You'll get this if you organise well" />
                     <InputGroup>
                         <InputLeftAddon>USDC</InputLeftAddon>
-                        <Input type="number" min={0} />
+                        <Input type="number" min={0} onChange={e => {
+                            setFormData({ ...formData, price: e.target.value })
+                        }} />
                     </InputGroup>
                 </FormControl>
 
@@ -94,9 +96,27 @@ export default function NewEvent({ children }: { children: React.ReactNode }) {
                         
                 <InfoPill
                     upperText='each attende pays'
-                    middleText={`${formData.atendeeLockupAmount} USDC`}
+                    middleText={`${Number(formData.atendeeLockupAmount) + Number(formData.price)} USDC`}
                     lowerText='before the event'
                     color='blue.100' />
+
+                <InfoPill
+                    upperText='if they attend, they get'
+                    middleText={`${formData.atendeeLockupAmount} USDC * #attendees`}
+                    lowerText='after the event is over'
+                    color='green.100' />
+
+                <InfoPill
+                    upperText='if you organise well, you get'
+                    middleText={`${formData.price} USDC per attendee`}
+                    lowerText='after the event is over'
+                    color='red.100' />
+
+                <InfoPill
+                    upperText="you'll also get"
+                    middleText={`${formData.atendeeLockupAmount} USDC per missing attendee`}
+                    lowerText='after the event is over'
+                    color='yellow.100' />
 
 
 
@@ -111,7 +131,7 @@ import { useState } from 'react';
 
 function InfoPill({ upperText, middleText, lowerText, color }: { upperText: string, middleText: string, lowerText: string, color: BackgroundProps['bg'] }) {
     return (
-        <Card padding={2} rounded={5} width={'100%'} height={'100%'} bg={color}>
+        <Card padding={2} rounded={5} width={'100%'} height={'100%'} bg={color} borderRadius={'xl'}>
             <Stack spacing={2} align="center">
                 <Text fontSize='sm'>{upperText}</Text>
                 <Text fontSize='lg'>{middleText}</Text>

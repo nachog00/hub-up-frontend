@@ -1,7 +1,7 @@
 "use client";
 import { type FC } from "react";
 
-import { HStack, Heading } from "@chakra-ui/react";
+import { Center, HStack, Heading } from "@chakra-ui/react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Image from "next/image";
 
@@ -9,6 +9,7 @@ import { useWindowSize } from "@/hooks/useWindowSize";
 
 import logo from "../../../public/img/logo_transparent.png";
 import { DarkModeButton } from "../DarkModeButton";
+import Sidebar from "../ui/sideBar";
 
 const Header: FC = () => {
   const { isTablet } = useWindowSize();
@@ -22,6 +23,8 @@ const Header: FC = () => {
       zIndex={10}
       justifyContent={"space-between"}
     >
+      <HStack spacing={4} alignItems="center">
+        <Sidebar/>
       <HStack>
         <Image src={logo.src} alt="logo" width={45} height={45} />
         {!isTablet && (
@@ -31,6 +34,7 @@ const Header: FC = () => {
         )}
       </HStack>
 
+      </HStack>
       <HStack>
         <ConnectButton />
         <DarkModeButton />

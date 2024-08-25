@@ -1,11 +1,27 @@
-import { FormControl, FormHelperText, FormLabel, Input, Select, Stack, Text } from "@chakra-ui/react";
-import BaseModal from "./BaseModal";
 import venues from '@/mock/venues';
+import { Card, Divider, FormControl, FormLabel, Input, InputGroup, InputLeftAddon, Select, Stack, Text, Textarea } from "@chakra-ui/react";
+import InfoTooltip from '../InfoTooltip';
+import BaseModal from "./BaseModal";
 
 export default function NewEvent({ children }: { children: React.ReactNode }) {
+
+    const [formData, setFormData] = useState({
+        venue: '',
+        date: '',
+        time: '',
+        duration: '',
+        minParticipants: '',
+        maxParticipants: '',
+        description: '',
+        atendeeLockupAmount: '',
+        price: '',
+        costDescription: '',
+    });
+
     return (
         <BaseModal title="New Event" target={children}>
             <Stack spacing={4}>
+
                 <Text>By hosting an event, you have to pick up a venue and decide on the event's prices</Text>
 
                 <FormControl>
@@ -34,15 +50,73 @@ export default function NewEvent({ children }: { children: React.ReactNode }) {
 
                 <FormControl>
                     <FormLabel>Min Participants</FormLabel>
-                    <Input type="number" placeholder="Min Participants" />
+                    <Input type="number" min={2} max={100} placeholder="Min Participants" />
                 </FormControl>
 
                 <FormControl>
                     <FormLabel>Max Participants</FormLabel>
-                    <Input type="number" placeholder="Max Participants" />
+                    <Input type="number" min={3} max={101} placeholder="Max Participants" />
                 </FormControl>
-                
+
+                <FormControl>
+                    <FormLabel>Description</FormLabel>
+                    <Textarea placeholder='Event info for your atendees' />
+                </FormControl>
+
+                <FormControl>
+                    <FormLabel style={{ display: 'inline' }}>Atendee lockup amount</FormLabel>
+                    <InfoTooltip text="This is the amount of money each attende will pay to attend. You'll get this if you organise well" />
+                    <InputGroup>
+                        <InputLeftAddon>USDC</InputLeftAddon>
+                        <Input type="number" min={0} onChange={e => {
+                            setFormData({ ...formData, atendeeLockupAmount: e.target.value })
+                        }} />
+                    </InputGroup>
+                </FormControl>
+
+                <FormControl>
+                    <FormLabel style={{ display: 'inline' }}>Price</FormLabel>
+                    <InfoTooltip text="This is the amount of money each attende will pay to attend. You'll get this if you organise well" />
+                    <InputGroup>
+                        <InputLeftAddon>USDC</InputLeftAddon>
+                        <Input type="number" min={0} />
+                    </InputGroup>
+                </FormControl>
+
+                <FormControl>
+                    <FormLabel>Cost description</FormLabel>
+                    <Textarea placeholder='Explain your attendees what you need the price money for (for example: booking a cowork spot)' />
+                </FormControl>
+
+                <Divider />
+
+                <FormLabel>Summary</FormLabel>
+                        
+                <InfoPill
+                    upperText='each attende pays'
+                    middleText={`${formData.atendeeLockupAmount} USDC`}
+                    lowerText='before the event'
+                    color='blue.100' />
+
+
+
+
             </Stack>
         </BaseModal>
     );
+}
+
+import { type BackgroundProps } from '@chakra-ui/react';
+import { useState } from 'react';
+
+function InfoPill({ upperText, middleText, lowerText, color }: { upperText: string, middleText: string, lowerText: string, color: BackgroundProps['bg'] }) {
+    return (
+        <Card padding={2} rounded={5} width={'100%'} height={'100%'} bg={color}>
+            <Stack spacing={2} align="center">
+                <Text fontSize='sm'>{upperText}</Text>
+                <Text fontSize='lg'>{middleText}</Text>
+                <Text fontSize='sm'>{lowerText}</Text>
+            </Stack>
+        </Card>
+    )
 }

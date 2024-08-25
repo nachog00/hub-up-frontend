@@ -11,4 +11,10 @@ export type MeetupEvent = {
         id: string;
         rating: number;
     };
+    interests: Interest[];
+}
+
+type Interest = {
+    id: number;
+    name: string;
 }

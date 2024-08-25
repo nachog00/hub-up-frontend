@@ -21,7 +21,7 @@ const events : MeetupEvent[] = [
         },
         host: {
             id: '0x1234567890abcdef',
-            name: 'Manuel Araoz',
+            name: 'Gad Saad',
             rating: 4.5,
             bio: 'I like to meet cryptopunks and talk about zk',
         },
@@ -40,7 +40,7 @@ const events : MeetupEvent[] = [
         },
         host: {
             id: '0x1234567890abcdef',
-            name: 'Xi Jinping',
+            name: 'Peter Thiel',
             rating: 4.5,
         },
         interests: [
@@ -58,7 +58,7 @@ const events : MeetupEvent[] = [
         },
         host: {
             id: '0x1234567890abcdef',
-            name: 'Fernando Lluberes',
+            name: 'Jorge Luis Borges',
             rating: 4.5,
         },
         interests: [
@@ -76,7 +76,7 @@ const events : MeetupEvent[] = [
         },
         host: {
             id: '0x1234567890abcdef',
-            name: 'Felix Lluberes',
+            name: 'Manuel Belgrano',
             rating: 4.5,
         },
         interests: [

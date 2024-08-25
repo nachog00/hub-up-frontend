@@ -15,7 +15,10 @@ const events : MeetupEvent[] = [
             name: 'Jackie Chan',
             rating: 4.5,
         },
-        
+        interests: [
+            { id: 1, name: 'Politics' },
+            { id: 2, name: 'Economics' },
+        ]
     },
     {
         id:2,
@@ -30,6 +33,10 @@ const events : MeetupEvent[] = [
             name: 'Xi Jinping',
             rating: 4.5,
         },
+        interests: [
+            { id: 1, name: 'Politics' },
+            { id: 3, name: 'Technology' },
+        ]
     },
     {
         id:3,
@@ -44,6 +51,10 @@ const events : MeetupEvent[] = [
             name: 'Joe Biden',
             rating: 4.5,
         },
+        interests: [
+            { id: 1, name: 'Politics' },
+            { id: 2, name: 'Economics' },
+        ]
     },
     {
         id:4,
@@ -58,6 +69,10 @@ const events : MeetupEvent[] = [
             name: 'Donald Trump',
             rating: 4.5,
         },
+        interests: [
+            { id: 1, name: 'Politics' },
+            { id: 3, name: 'Technology' },
+        ]
     },
 ]
 

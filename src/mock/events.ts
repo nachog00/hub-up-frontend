@@ -5,10 +5,19 @@ const events : MeetupEvent[] = [
     {
         id: 1,
         date: '2022-01-01:14:30:00Z',
+        maxParticipants: 5,
+        minParticipants: 2,
+        description: 'This is a test event',
+        atendeeLockupAmount: 5,
+        price: 10,
+        costDescription: 'Gotta pay the booking',
+        duration: 2,
+        protocol: 'avalanche',
         location: {
             name: 'The White House',
             address: '1600 Pennsylvania Ave NW, Washington, DC 20500',
             coordinates: [37.5977, -77.0365],
+            id: 1,
         },
         host: {
             id: '0x1234567890abcdef',

@@ -14,6 +14,8 @@ import {
   BlockNumber,
   TransferNative,
   SignMessage,
+  // HubUp,
+  Erc20
 } from "./components";
 
 const MainPane: FC = () => {
@@ -48,6 +50,8 @@ const MainPane: FC = () => {
               flexWrap={"wrap"}
               gap={5}
             >
+              {/* <HubUp /> */}
+              <Erc20 />
               <SignMessage />
               <TransferNative />
             </Flex>

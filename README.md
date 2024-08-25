@@ -1,16 +1,6 @@
 <div align="center">
 
-<img src="./public/img/logo_transparent.png" width="70px"/>
-<br><br>
-
-<h1><strong> Next Web3 Boilerplate </strong></h1>
-
-[![Stargazers](https://img.shields.io/github/stars/Pedrojok01/Next-Web3-Boilerplate)](https://github.com/Pedrojok01/Next-Web3-Boilerplate/stargazers)
-[![Forks](https://img.shields.io/github/forks/Pedrojok01/Next-Web3-Boilerplate)](https://github.com/Pedrojok01/Next-Web3-Boilerplate/issues)
-[![Issues](https://img.shields.io/github/issues/Pedrojok01/Next-Web3-Boilerplate)](https://github.com/Pedrojok01/Next-Web3-Boilerplate/issues)
-[![MIT License](https://img.shields.io/github/license/Pedrojok01/Next-Web3-Boilerplate)](https://github.com/Pedrojok01/Next-Web3-Boilerplate/blob/main/License)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/pierre-e/)
-![Vercel](https://img.shields.io/github/deployments/Pedrojok01/Next-Web3-Boilerplate/production?label=Vercel&logo=Vercel&logoColor=white)
+<h1><strong> Hub Up </strong></h1>
 
 <br></br>
 
@@ -21,8 +11,6 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Update:](#update)
-- [Description](#description)
 - [Built With](#built-with)
 - [Installation](#installation)
   - [Make sure you have the following ready:](#make-sure-you-have-the-following-ready)
@@ -33,20 +21,9 @@
 - [Features:](#features)
 - [⭐️ ... and don't forget to leave a star if you like it! ⭐️](#️--and-dont-forget-to-leave-a-star-if-you-like-it-️)
 
-## Update:
-
-2024-02:
-
-- Switched to Next.js v14;
-- Switched to Viem & Wagmi v2;
-- Add support for `Linea`, `lineaTestnet`, `Bsc` & `bscTestnet` networks;
-- Bump all dependencies to the latest versions;
-
 ## Description
 
-Simple and minimalist Web3 boilerplate to boost your Dapp development. Built using the latest tech out there: [Next.js](https://nextjs.org/), [Viem](https://viem.sh/), [Wagmi](https://wagmi.sh/), [RainbowKit](https://www.rainbowkit.com/), [ChakraUI](https://chakra-ui.com/), and [Typescript](https://www.typescriptlang.org/). Eslint, Prettier, and Husky are already configured. The perfect starting point for your next web3 project.
-
-Try it yourself: [https://next-web3-boilerplate.com/](https://next-web3-boilerplate.com/)
+A platform where you can find people to cowork with
 
 ## Built With
 

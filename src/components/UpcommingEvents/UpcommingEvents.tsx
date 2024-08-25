@@ -1,7 +1,9 @@
 "use client"
 
-import events from "@/mock/events";
 import { Card, Divider, Heading } from "@chakra-ui/react";
+
+import events from "@/mock/events";
+
 import EventListItem from "../Event/EventListItem";
 
 export default function UpcommingEvents() {

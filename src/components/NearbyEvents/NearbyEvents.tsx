@@ -1,10 +1,9 @@
 "use client"
 
-import type { MeetupEvent } from "@/interfaces/Event";
 import events from "@/mock/events";
 import { Box, Button, Card, Flex, Heading } from "@chakra-ui/react";
 import { useState } from "react";
-import { EventListItem } from "../Event";
+import { ListEvents } from "../Event";
 import MapComponent from "../Map/Map";
 
 export default function NearbyEvents() {
@@ -19,7 +18,7 @@ export default function NearbyEvents() {
                     {displayMode === 'map' ? 'List View' : 'Map View'}
                 </Button>
             </Flex>
-            {displayMode === 'map' ? <Map /> : <List events={events} />}
+            {displayMode === 'map' ? <Map /> : <ListEvents events={events} />}
         </Card>
     );
 }
@@ -29,15 +28,5 @@ function Map() {
         <Box>
             <MapComponent />
         </Box>
-    );
-}
-
-type ListProps = { events: MeetupEvent[] }
-
-function List({ events }: ListProps) {
-    return (
-        <div>
-            {events.map((event) => <EventListItem event={event} />)}
-        </div>
     );
 }

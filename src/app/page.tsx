@@ -13,7 +13,6 @@ export default function Home() {
 
       <Stack spacing={2}>
 
-
         <SimpleGrid columns={[1, null, 4]} spacing={2}>
           <GridItem colSpan={[1, null, 3]}>
             <UpcommingEvents />

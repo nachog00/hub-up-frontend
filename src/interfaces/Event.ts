@@ -1,4 +1,5 @@
 export type MeetupEvent = {
+    id: number;
     date: ReturnType<Date['toISOString']>;
     location: {
         name: string;

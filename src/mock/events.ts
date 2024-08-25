@@ -3,6 +3,7 @@ import type { MeetupEvent } from "@/interfaces/Event";
    // mock values
 const events : MeetupEvent[] = [
     {
+        id: 1,
         date: '2022-01-01:14:30:00Z',
         location: {
             name: 'The White House',
@@ -17,6 +18,7 @@ const events : MeetupEvent[] = [
         
     },
     {
+        id:2,
         date: '2022-01-02:14:30:00Z',
         location: {
             name: 'The White House',
@@ -30,6 +32,7 @@ const events : MeetupEvent[] = [
         },
     },
     {
+        id:3,
         date: '2022-01-03:14:30:00Z',
         location: {
             name: 'The White House',
@@ -43,6 +46,7 @@ const events : MeetupEvent[] = [
         },
     },
     {
+        id:4,
         date: '2022-01-04:14:30:00Z',
         location: {
             name: 'The White House',

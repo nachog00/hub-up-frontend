@@ -13,6 +13,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "dev:host": "next dev --host",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write \"**/*.{ts,tsx,js}\"",
@@ -31,11 +32,13 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "11.1.7",
+    "leaflet": "^1.9.4",
     "lucide-react": "^0.435.0",
     "next": "14.2.3",
     "react": "18.3.0",
     "react-dom": "18.3.0",
     "react-jazzicon": "1.0.4",
+    "react-leaflet": "^4.2.1",
     "sharp": "0.33.3",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
@@ -43,9 +46,11 @@
     "wagmi": "2.5.22"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.12",
     "@types/node": "20.12.7",
     "@types/react": "18.3.0",
     "@types/react-dom": "18.3.0",
+    "@types/react-leaflet": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "7.7.1",
     "autoprefixer": "^10.4.20",
     "eslint": "8.57.0",

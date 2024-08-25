@@ -1,10 +1,9 @@
 "use client"
 
-import { Flex, Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
+import type { ReactNode } from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
-import type { ReactNode } from "react";
-import Sidebar from "./ui/sideBar";
 // import {Sidebar} from "./Sidebar";
 
 export default function BaseLayout({ children }: Readonly<{ children: ReactNode }>) {

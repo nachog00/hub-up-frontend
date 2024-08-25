@@ -1,5 +1,5 @@
 import venues from '@/mock/venues';
-import { Card, Divider, FormControl, FormLabel, Input, InputGroup, InputLeftAddon, Select, Stack, Text, Textarea } from "@chakra-ui/react";
+import { Card, Divider, FormControl, FormLabel, Input, InputGroup, InputLeftAddon, Link, Select, Stack, Text, Textarea } from "@chakra-ui/react";
 import InfoTooltip from '../InfoTooltip';
 import BaseModal from "./BaseModal";
 
@@ -93,7 +93,7 @@ export default function NewEvent({ children }: { children: React.ReactNode }) {
                 <Divider />
 
                 <FormLabel>Summary</FormLabel>
-                        
+
                 <InfoPill
                     upperText='each attende pays'
                     middleText={`${Number(formData.atendeeLockupAmount) + Number(formData.price)} USDC`}
@@ -118,7 +118,23 @@ export default function NewEvent({ children }: { children: React.ReactNode }) {
                     lowerText='after the event is over'
                     color='yellow.100' />
 
+                <Divider />
 
+                <Stack>
+                    <Text>By hosting an event, you agree to the terms and conditions</Text>
+                    <Link href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Read the terms and conditions</Link>
+                </Stack>
+
+                <Divider />
+                
+                <FormControl>
+                    <FormLabel>Venue</FormLabel>
+                    <Select placeholder='Select a venue'>
+                        {venues.map(v => {
+                            return <option key={v.id} value={v.id}>{`${v.nombre} - ${v.calle_nombre} ${v.calle_altura}`}</option>
+                        })}
+                    </Select>
+                </FormControl>
 
 
             </Stack>

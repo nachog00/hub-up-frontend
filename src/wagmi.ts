@@ -15,24 +15,17 @@ import { createConfig, http } from "wagmi";
 import {
   mainnet,
   sepolia,
-  polygon,
-  polygonMumbai,
-  optimism,
-  optimismGoerli,
+  avalanche,
+  avalancheFuji,
   arbitrum,
-  arbitrumGoerli,
+  arbitrumSepolia,
   zkSync,
   zkSyncSepoliaTestnet,
-  linea,
-  lineaTestnet,
-  base,
-  baseGoerli,
-  bsc,
-  bscTestnet,
+  polygon,
+  polygonAmoy,
 } from "wagmi/chains";
 
-import linea_logo from "../public/img/linea_logo.png";
-import lineaTesnet_logo from "../public/img/lineaTesnet_logo.png";
+import polygon_logo from "../public/img/polygon_logo.svg";
 import zksync_logo from "../public/img/zksync_logo.svg";
 
 const walletConnectProjectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID;
@@ -64,45 +57,32 @@ const connectors = connectorsForWallets(
 
 // Fix missing icons
 const customZkSyncSepoliaTestnet = { ...zkSyncSepoliaTestnet, iconUrl: zksync_logo.src };
-const customLinea = { ...linea, iconUrl: linea_logo.src };
-const customLineaTestnet = { ...lineaTestnet, iconUrl: lineaTesnet_logo.src };
+const customPolygonAmoyTestnet = { ...polygonAmoy, iconUrl: polygon_logo.src };
 
 const transports: Record<number, Transport> = {
   [mainnet.id]: http(),
   [sepolia.id]: http(),
-  [polygon.id]: http(),
-  [polygonMumbai.id]: http(),
-  [optimism.id]: http(),
-  [optimismGoerli.id]: http(),
+  [avalanche.id]: http(),
+  [avalancheFuji.id]: http(),
   [arbitrum.id]: http(),
-  [arbitrumGoerli.id]: http(),
+  [arbitrumSepolia.id]: http(),
   [zkSync.id]: http(),
   [zkSyncSepoliaTestnet.id]: http(),
-  [linea.id]: http(),
-  [lineaTestnet.id]: http(),
-  [base.id]: http(),
-  [baseGoerli.id]: http(),
-  [bsc.id]: http(),
-  [bscTestnet.id]: http(),
+  [polygon.id]: http(),
+  [polygonAmoy.id]: http(),
 };
 export const wagmiConfig = createConfig({
   chains: [
     mainnet,
     sepolia,
-    polygon,
-    polygonMumbai,
-    optimism,
-    optimismGoerli,
+    avalanche,
+    avalancheFuji,
     arbitrum,
-    arbitrumGoerli,
-    customLinea,
-    customLineaTestnet,
+    arbitrumSepolia,
     zkSync,
     customZkSyncSepoliaTestnet,
-    base,
-    baseGoerli,
-    bsc,
-    bscTestnet,
+    polygon,
+    customPolygonAmoyTestnet,
   ],
   connectors,
   transports,

@@ -2,7 +2,7 @@
 
 import type { MeetupEvent } from "@/interfaces/Event";
 import events from "@/mock/events";
-import { Button, Card, Flex, Heading } from "@chakra-ui/react";
+import { Box, Button, Card, Flex, Heading } from "@chakra-ui/react";
 import { useState } from "react";
 import { EventListItem } from "../Event";
 import MapComponent from "../Map/Map";
@@ -20,13 +20,15 @@ export default function NearbyEvents() {
                 </Button>
             </Flex>
             {displayMode === 'map' ? <Map /> : <List events={events} />}
-        </Card> 
+        </Card>
     );
 }
 
 function Map() {
     return (
-        <MapComponent />
+        <Box>
+            <MapComponent />
+        </Box>
     );
 }
 

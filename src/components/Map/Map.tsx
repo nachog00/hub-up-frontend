@@ -33,7 +33,7 @@ const MapComponent = ({ events = mockEvents }: MapProps) => {
 
   return (
     <div className="map-container">
-      <MapContainer center={center} zoom={zoom} style={{ height: "260px" }}>
+      <MapContainer center={center} zoom={zoom} style={{ height: "320px" }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
